@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
+import { CartProvider } from './Context/cartContext';
 
 import './App.css';
 
@@ -20,15 +21,16 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <NavBar />
-     
-        <Routes>
-          <Route path="/" element={<Content />} />
-          <Route path="/productos" element={<ItemListContainerHoc />} />
-          <Route path="/productos/categoria/:idCategory" element={<ItemListContainerHoc />} />
-          <Route path="/productos/:id" element={<ItemDetail />} />
-        </Routes>
-        <Footer />
+      <CartProvider>
+        <NavBar />
+          <Routes>
+            <Route path="/" element={<Content />} />
+            <Route path="/productos" element={<ItemListContainerHoc />} />
+            <Route path="/productos/categoria/:idCategory" element={<ItemListContainerHoc />} />
+            <Route path="/productos/:id" element={<ItemDetail />} />
+          </Routes>
+          <Footer />
+        </CartProvider>
       </BrowserRouter>
       
       </>

@@ -13,23 +13,23 @@ const ItemListContainer = ({ products }) => {
               key={product.id}
             >
               <h2 className="text-xl text-center mb-2 font-bold tracking-tight text-gray-900 min-h-[3rem]">
-                {product.nombre}
+                {product.name}
               </h2>
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                 <img
-                  src={product.imagen}
-                  alt={product.nombre}
+                  src={product.image}
+                  alt={product.name}
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
               <div className="mt-4 flex flex-col justify-between mb-4 flex-grow">
                 <h3 className="text-sm text-gray-700">
                   
-                    {product.descripcion}
+                    {product.description}
                 
                 </h3>
                 <p className="text-sm font-medium text-gray-900">
-                  ${product.precio}
+                  ${product.price}
                 </p>
               </div>
               <Link to={`/productos/${product.id}`}>

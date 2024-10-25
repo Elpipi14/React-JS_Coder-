@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../Context/cartContext";
+
 import cart from '../../assets/products/cart.svg';
 import Cart from "./Cart";
 
 export const CartWidget = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { getTotalQuantity } = useContext(CartContext);
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
     const toggleMenu = () => setIsMenuOpen(prevState => !prevState);
     const closeMenu = () => setIsMenuOpen(false);
     
@@ -15,7 +19,7 @@ export const CartWidget = () => {
             </button>
             <span
                 className="relative bottom-10 right-3 rounded-full bg-red-500 px-[0.45em] py-[0.15em] text-[1rem] font-bold leading-none text-black"
-            >1</span>
+            >{getTotalQuantity()}</span>
             
             {isMenuOpen && (
                 <div className="absolute right-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-auto">
@@ -25,7 +29,7 @@ export const CartWidget = () => {
                             X
                         </button>
                     </div>
-                    <Cart  stock={10}/>
+                    <Cart />
                 </div>
             )}
         </div>

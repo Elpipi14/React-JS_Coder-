@@ -24,13 +24,13 @@ const FilterHocProducts = (Component) => {
     const search = () => {
       return products.filter((product) => {
         const FilterCategory = idCategory
-          ? product.categoria === idCategory
+          ? product.category === idCategory
           : true;
 
         // TolowerCase pasa todo a minuscula.
         const searchFilter =
-          product.nombre.toLowerCase().includes(query) ||
-          product.descripcion.toLowerCase().includes(query);
+          product.name.toLowerCase().includes(query) ||
+          product.description.toLowerCase().includes(query);
 
         return searchFilter && FilterCategory;
       });
