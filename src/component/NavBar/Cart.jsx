@@ -1,8 +1,17 @@
 import { useContext } from "react";
 import { CartContext } from "../../Context/cartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, getTotal, getTotalProduct, removeItem, clearCart } = useContext(CartContext);
+  const {
+    cart,
+    getTotal,
+    getTotalProduct,
+    removeProduct,
+    clearCart,
+    increaseQuantity,
+    decreaseQuantity,
+  } = useContext(CartContext);
 
   return (
     <div className="p-4 w-[250px] md:w-[350px] ">
@@ -17,23 +26,32 @@ const Cart = () => {
               />
               <div className="flex justify-center text-base font-medium text-gray-900">
                 <h3>{productCart.name}</h3>
-                <p className="ml-4">${productCart.price}</p>
+                <p className="ml-4">${productCart.price * productCart.quantity}</p>
               </div>
               <p className="mt-1 text-sm text-center text-gray-500"></p>
             </div>
 
             <div className="flex flex-col items-center justify-evenly text-sm my-4">
               <div className="flex">
-                <button className="w-12">-</button>
+                <button
+                  className="w-12"
+                  onClick={() => decreaseQuantity(productCart.id)}
+                >
+                  -
+                </button>
 
                 <p className="text-gray-500 text-xl"> {productCart.quantity}</p>
-               
-                <button className="w-12">+</button>
-                
+
+                <button
+                  className="w-12"
+                  onClick={() => increaseQuantity(productCart.id)}
+                >
+                  +
+                </button>
               </div>
               <div className="flex flex-col my-4 w-24">
                 <button
-                  onClick={()=>removeItem(productCart.id)}
+                  onClick={() => removeProduct(productCart.id)}
                   type="button"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
@@ -44,7 +62,7 @@ const Cart = () => {
           </div>
         ))
       ) : (
-        <p>El carrito está vacío</p>
+        <p className="text-center mt-4">El carrito esta vacío</p>
       )}
 
       <div className="border-gray-200 px-4 py-6 sm:px-6">
@@ -53,34 +71,35 @@ const Cart = () => {
           <p>${getTotal()}</p>
         </div>
 
-        <div className="mt-6">
-        <button
-        onClick={() => clearCart()}
-          type="button"
-          className="flex items-center justify-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-        >
-          Vaciar Carrito
-        </button>
+        <div className="flex flex-col items-center mt-6">
+          <button
+            onClick={() => clearCart()}
+            type="button"
+            className="rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600"
+          >
+            Vaciar Carrito
+          </button>
         </div>
 
-        <div className="mt-6">
+        <div className="flex flex-col mt-6">
           <a
             href="#"
-            className="flex items-center justify-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+            className="text-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600"
           >
             Finalizar Compra
           </a>
         </div>
 
-
-        <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-          <button
-            type="button"
-            className="font-medium text-custom-gree-2 hover:text-indigo-600"
-          >
-            Continuar Comprando
-          </button>
-        </div>
+        <Link to="/productos">
+          <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+            <button
+              type="button"
+              className="font-medium text-custom-gree-2 hover:text-indigo-600"
+            >
+              Continuar Comprando
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   );

@@ -7,7 +7,9 @@ import NavBar from './component/NavBar/NavBar';
 import Content from './component/Content/Header';
 import ItemListContainerHoc from './component/Products/ItemListContainer';
 import ItemDetail from './component/Products/ItemDetail';
+import Cart from './component/NavBar/Cart';
 import Footer from './component/Footer';
+
 
 
 
@@ -28,6 +30,7 @@ function App() {
             <Route path="/productos" element={<ItemListContainerHoc />} />
             <Route path="/productos/categoria/:idCategory" element={<ItemListContainerHoc />} />
             <Route path="/productos/:id" element={<ItemDetail />} />
+            <Route path='/productos' element={<Cart />} />
           </Routes>
           <Footer />
         </CartProvider>
