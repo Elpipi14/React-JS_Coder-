@@ -9,6 +9,7 @@ import ItemListContainerHoc from './component/Products/ItemListContainer';
 import ItemDetail from './component/Products/ItemDetail';
 import Cart from './component/NavBar/Cart';
 import Footer from './component/Footer';
+import Contact from './component/Contact/Contact';
 
 
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/productos/categoria/:idCategory" element={<ItemListContainerHoc />} />
             <Route path="/productos/:id" element={<ItemDetail />} />
             <Route path='/productos' element={<Cart />} />
+            <Route path='/contacto' element={<Contact />} />
           </Routes>
           <Footer />
         </CartProvider>
