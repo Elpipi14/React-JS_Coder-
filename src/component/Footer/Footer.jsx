@@ -1,5 +1,5 @@
-import logo from "../assets/logo/piuweb.png";
-import lv from "../assets/logo/logo2.svg";
+import logo from "../../assets/logo/piuweb.png";
+import lv from "../../assets/logo/logo2.svg";
 
 const Footer = () => {
   return (

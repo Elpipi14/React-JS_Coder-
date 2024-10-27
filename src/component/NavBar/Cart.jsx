@@ -1,8 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../Context/cartContext";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+
   const {
     cart,
     getTotal,
@@ -80,15 +83,15 @@ const Cart = () => {
             Vaciar Carrito
           </button>
         </div>
-
-        <div className="flex flex-col mt-6">
-          <a
-            href="#"
-            className="text-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600"
-          >
-            Finalizar Compra
-          </a>
-        </div>
+        <Link to="/carrito/checkout">
+          <div className="flex flex-col mt-6">
+            <button
+              className="text-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600"
+            >
+              Finalizar Compra
+            </button>
+          </div>
+        </Link>
 
         <Link to="/productos">
           <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
