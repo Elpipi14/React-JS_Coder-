@@ -7,7 +7,7 @@ const Register = () => {
   const toggleTerms = () => setTerms(true);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white my-4">
       <h1 className="text-center font-courier-prime m-6 text-3xl font-bold text-black">
         Registro Cliente
       </h1>
@@ -22,7 +22,7 @@ const Register = () => {
         <input
           type="text"
           placeholder="Nombre"
-          className="w-full bg-transparent text-center rounded-md border border-gray-300  focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
+          className="w-full bg-transparent text-center rounded-md border border-gray-300  py-3 px-5 text-gray-800  focus:border-blue-500 focus:ring focus:ring-blue-200  transition"
         />
 
         {/* Apellido */}
@@ -71,7 +71,7 @@ const Register = () => {
             type="checkbox"
             className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
           />
-          <label for="remember-me" className="text-white ml-3 text-sm">
+          <label for="remember-me" className="text-black ml-3 text-sm">
             Acepto los {" "}
             <button
               type="button"

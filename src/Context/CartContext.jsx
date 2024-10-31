@@ -15,7 +15,7 @@ const CartProvider = ({ children }) => {
         icon: "success",
         title: "Se agrego al carrito",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
       });
     } else {
       Swal.fire({
@@ -23,7 +23,7 @@ const CartProvider = ({ children }) => {
         icon: "error",
         title: "Ya se agrego al carrito",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
       });
     }
   };
@@ -55,9 +55,10 @@ const CartProvider = ({ children }) => {
     setCart((aumStock) =>
       aumStock.map((item) =>
         item.id === itemId
-          ? { ...item, quantity: Math.max(item.quantity - 1, 1) }
+          ? { ...item, quantity: Math.max(item.quantity - 1) }
           : item
       )
+      .filter((item) => item.quantity > 0)
     );
   };
 

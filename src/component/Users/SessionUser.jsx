@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo/variete.svg";
 
 const SessionUser = ({ onClose }) => {
@@ -50,12 +51,13 @@ const SessionUser = ({ onClose }) => {
               <div className="m-4">
                 <h3 className="text-gray-700 dark:text-gray-800 text-base">
                   ¿No tenés cuenta?{" "}
-                  <a
-                    href="#"
+                  <Link to="/registro" >
+                  <button
                     className="text-[#258778] font-bold hover:underline"
                   >
                     Registrate
-                  </a>
+                  </button>
+                  </Link>
                 </h3>
               </div>
             </div>
