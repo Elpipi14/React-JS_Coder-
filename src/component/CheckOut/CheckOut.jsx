@@ -11,10 +11,17 @@ const CheckOut = () =>{
               <h2 class="text-2xl font-extrabold text-gray-800">Metodos de Pagos</h2>
               <div class="grid gap-4 sm:grid-cols-2 mt-8">
                 <div class="flex items-center">
+                <input type="checkbox" id="scales" name="scales" />
                   <div class="ml-4 flex gap-2">
                     <img src="https://readymadeui.com/images/visa.webp" class="w-12" alt="card1" />
                     <img src="https://readymadeui.com/images/american-express.webp" class="w-12" alt="card2" />
-                    <img src="https://readymadeui.com/images/master.webp" class="w-12" alt="card3" />
+                  </div>
+                </div>
+                <div class="flex items-center">
+                <input type="checkbox" id="scales" name="scales" />
+                  <div class="ml-4 flex gap-2">
+                    <img src="https://img.icons8.com/?size=100&id=nTLVtpxsNPaz&format=png&color=000000" class="w-12" alt="mercadoPago" />
+                    
                   </div>
                 </div>
               </div>

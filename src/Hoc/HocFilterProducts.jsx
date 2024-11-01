@@ -20,18 +20,15 @@ const FilterHocProducts = (Component) => {
       setQuery(e.target.value.toLowerCase());
     };
 
-    // Filtra los productos según la búsqueda
     const search = () => {
       return products.filter((product) => {
-        const FilterCategory = idCategory
-          ? product.category === idCategory
-          : true;
-
-        // TolowerCase pasa todo a minuscula.
+        const FilterCategory = idCategory ? product.category === idCategory : true;
+    
+        // Verifica si `name` y `description` existen y convierte a minúsculas solo si son cadenas
         const searchFilter =
-          product.name.toLowerCase().includes(query) ||
-          product.description.toLowerCase().includes(query);
-
+          (product.name?.toLowerCase().includes(query) || false) ||
+          (product.description?.toLowerCase().includes(query) || false);
+    
         return searchFilter && FilterCategory;
       });
     };

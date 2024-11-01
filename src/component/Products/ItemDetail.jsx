@@ -6,11 +6,11 @@ import Item from "./Item";
 
 const ItemDetail = () => {
   const { id } = useParams();
-  const { products, spinners } = useProductsId(id); 
+  const { product, spinners } = useProductsId(id); 
 
   return (
     <div>
-      {spinners === true ? <Spinner /> : <Item product={products} />}
+      {spinners === true ? <Spinner /> : <Item product={product} />}
     </div>
   );
 };
