@@ -40,7 +40,7 @@ export const useProductsId = (id) => {
     getProducts()
       .then((data) => {
         const findProduct = data.find((product) => product.id === id);
-        setProduct(findProduct || null); // Establece null si el producto no se encuentra
+        setProduct(findProduct);
       })
       .catch((error) => console.error(error))
       .finally(() => setSpinners(false));
