@@ -1,7 +1,7 @@
 import ProductsItems from "./ItemsSample";
-import plato1 from '../../../assets/products/plato1.png';
-import plato2 from '../../../assets/products/plato2.png';
-import plato3 from '../../../assets/products/plato3.png';
+import plato1 from "../../../assets/products/plato1.png";
+import plato2 from "../../../assets/products/plato2.png";
+import plato3 from "../../../assets/products/plato3.png";
 import { Link } from "react-router-dom";
 
 const SampleProducts = () => {
@@ -15,9 +15,8 @@ const SampleProducts = () => {
         </div>
         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
           <span className="relative inline-block">
-           Tu comida lista para llevar al mejor precio</span>
-        
-          
+            Tu comida lista para llevar al mejor precio
+          </span>
         </h2>
         <p className="text-base text-gray-700 md:text-lg">
           ¡Gran variedad de opciones diarias!
@@ -55,16 +54,26 @@ const SampleProducts = () => {
 
       <div className="mt-10 py-12 m-auto flex flex-col items-center text-center">
         <h1 className="animate-bounce px-3 mx-2 mb-4 w-auto font-semibold tracking-wider text-black uppercase rounded-md bg-teal-accent-400 text-4xl">
-          Descrubre Nuestros Productos</h1>
-        <h3 className="m-2 text-2xl">Elige tu comida del día - Gran variedad</h3>
-        <p className="m-2 text-xl indent-8">Descubre nuestras deliciosas viandas caseras, preparadas con ingredientes frescos y de la mejor calidad. Tenemos opciones para todos los gustos, desde platos tradicionales hasta opciones saludables. ¡Elige el tuyo y disfruta!</p>
-        <Link to="/productos" className="text-blue-500 hover:underline m-2 pr-2 text-center">
-              Ver más productos
+          Descrubre Nuestros Productos
+        </h1>
+        <h3 className="m-2 text-2xl">
+          Elige tu comida del día - Gran variedad
+        </h3>
+        <p className="m-2 text-xl indent-8">
+          Descubre nuestras deliciosas viandas caseras, preparadas con
+          ingredientes frescos y de la mejor calidad. Tenemos opciones para
+          todos los gustos, desde platos tradicionales hasta opciones
+          saludables. ¡Elige el tuyo y disfruta!
+        </p>
+        <Link
+          to="/productos"
+          onClick={() => window.scrollTo(0, 0)}
+          className="text-blue-500 hover:underline m-2 pr-2 text-center"
+        >
+          Ver más productos
         </Link>
       </div>
     </section>
-
-
   );
 };
 

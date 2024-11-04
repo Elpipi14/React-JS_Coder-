@@ -43,7 +43,8 @@ const SessionUser = ({ onClose }) => {
                 />
                 <button
                   type="submit"
-                  className="border rounded-full  items-center justify-center py-3 px-7 text-center text-base font-medium text-black hover:bg-[#0BB489] hover:border-[#0BB489] mt-4"
+                  disabled
+                  className="disabled:opacity-60 border rounded-full  items-center justify-center py-3 px-7 text-center text-base font-medium text-black hover:bg-[#0BB489] hover:border-[#0BB489] mt-4"
                 >
                   Ingresar
                 </button>
@@ -54,6 +55,7 @@ const SessionUser = ({ onClose }) => {
                   <Link to="/registro" >
                   <button
                     className="text-[#258778] font-bold hover:underline"
+                    onClick={onClose}
                   >
                     Registrate
                   </button>

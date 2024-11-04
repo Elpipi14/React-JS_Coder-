@@ -1,6 +1,6 @@
 const TermsAndConditions = ({ onClose }) => {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+      <div className="py-4 fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
         <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full overflow-auto max-h-screen">
           <h1 className="text-2xl font-bold mb-4">Términos y Condiciones sobre la Información del Usuario</h1>
   

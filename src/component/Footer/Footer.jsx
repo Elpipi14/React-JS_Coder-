@@ -1,5 +1,6 @@
 import logo from "../../assets/logo/piuweb.png";
 import lv from "../../assets/logo/logo2.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,17 +25,17 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex my-1 sm:ml-2 sm:mr-2">
-            <a
-              href="#"
+            <Link  to="/productos"
               className="transition-colors duration-300 text-black hover:text-deep-purple-800"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Productos
-            </a>
+            </Link>
           </div>
 
-          <div className="flex my-1 sm:ml-2 sm:mr-2">
+          <div className="opacity-65 flex my-1 sm:ml-2 sm:mr-2">
             <a
-              href="#"
+              // href=""
               target="_blank"
               rel="perfil"
               className="transition-colors duration-300 text-black hover:text-deep-purple-800"
@@ -42,16 +43,13 @@ const Footer = () => {
               Perfil
             </a>
           </div>
-
+      
           <div className="flex my-1 sm:ml-2 sm:mr-2">
-            <a
-              href="#"
-              target="_blank"
-              rel="Email Contacto"
-              className="transition-colors duration-300 text-black hover:text-deep-purple-800"
+            <Link to="/contacto" className="transition-colors duration-300 text-black hover:text-deep-purple-800"
+            onClick={() => window.scrollTo(0, 0)}
             >
               Contacto
-            </a>
+            </Link>
           </div>
 
           <div className="flex my-1 sm:ml-2 sm:mr-2">

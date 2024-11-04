@@ -20,6 +20,7 @@ const ProductsItems = ({title, price, description, subtitle, img}) =>{
           <div className="text-center mt-6">
             <Link
               to="/productos"
+              onClick={() => window.scrollTo(0, 0)}
               className="inline-flex hover:underline items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-green-600 focus:shadow-outline focus:outline-none"
             >
               Ver más productos

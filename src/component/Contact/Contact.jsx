@@ -3,7 +3,7 @@ const Contact = () => {
       <div className="flex justify-center items-center min-h-screen px-4">
         <div className="w-full max-w-lg p-6 bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg">
           <h1 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6 text-center">Contacto</h1>
-          <form className="space-y-4">
+          <form className="space-y-4 text-center">
             <div>
               <label className="text-base font-medium text-gray-700 dark:text-gray-300">
                 Email *
@@ -11,7 +11,7 @@ const Contact = () => {
               <input
                 type="email"
                 className="w-full bg-transparent text-center rounded-md border border-gray-300 dark:border-gray-600 py-3 px-5 text-gray-800 dark:text-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 dark:focus:ring-blue-500 transition"
-                placeholder="Ingresa tu correo electrónico"
+                placeholder="correo@gmail.com"
               />
             </div>
             <div>

@@ -85,7 +85,8 @@ const Register = () => {
         </div>
         <button
           type="submit"
-          className="border rounded-full  items-center justify-center py-3 px-7 text-center text-base font-medium text-black hover:bg-[#0BB489] hover:border-[#0BB489] mt-4"
+          className="disabled:opacity-50 border rounded-full  items-center justify-center py-3 px-7 text-center text-base font-medium text-black hover:bg-[#0BB489] hover:border-[#0BB489] mt-4"
+          disabled
         >
           Registrarse
         </button>
