@@ -33,7 +33,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="opacity-65 flex my-1 sm:ml-2 sm:mr-2">
+          <div className="flex my-1 sm:ml-2 sm:mr-2">
             <a
               // href=""
               target="_blank"

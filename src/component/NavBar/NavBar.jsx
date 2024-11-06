@@ -1,19 +1,24 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo/variete.svg";
 import { CartWidget } from "./CartWidget.jsx";
 import subLogo from "../../assets/logo/Lv.png";
 import users from "../../assets/logo/users.svg";
-
 import SessionUser from "../Users/SessionUser.jsx";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => setIsMenuOpen((prevState) => !prevState);
-
   const [session, setSession] = useState(false);
+  const location = useLocation(); // Detecta la ubicación actual
+
+  const toggleMenu = () => setIsMenuOpen((prevState) => !prevState);
   const toggleSession = () => setSession(true);
+
+  // Cierra el menú cuando la ubicación cambia
+  useEffect(() => {
+    setIsMenuOpen(false); // Cierra el menú
+  }, [location]); // Se ejecuta cada vez que cambia la ubicación
+
   return (
     <div className="bg-gray-900 w-full">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8">

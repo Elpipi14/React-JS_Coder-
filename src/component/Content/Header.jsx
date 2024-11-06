@@ -14,7 +14,7 @@ const Content = () => {
             </div>
             <div className="max-w-xl mb-6">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                SABORES QUE INSPIRAN, PLATOS QUE ENAMORAS...
+                SABORES QUE INSPIRAN, PLATOS QUE ENAMORAN...
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
               Bienvenidos a La Variété, donde cada plato es una celebración del sabor y la frescura. Descubre una amplia variedad de comidas caseras, preparadas con ingredientes de la más alta calidad, listas para deleitar tu paladar y hacerte sentir como en casa. Ya sea para el almuerzo, la cena o cualquier ocasión especial, en La Varieté encontrarás siempre el sabor perfecto y al mejor precio.

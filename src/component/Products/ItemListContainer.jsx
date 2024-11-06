@@ -33,7 +33,9 @@ const ItemListContainer = ({ products }) => {
                 </p>
               </div>
               <Link to={`/productos/${product.id}`}>
-                <button className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-green-600 focus:shadow-outline focus:outline-none">
+                <button 
+                 onClick={() => window.scrollTo(0, 0)}
+                 className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-green-500 rounded shadow-md hover:bg-green-600 focus:shadow-outline focus:outline-none">
                   Ver Producto
                 </button>
               </Link>
